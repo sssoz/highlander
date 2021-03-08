@@ -1,4 +1,4 @@
-# Immersion Theme
+# Highlander Theme
 An official theme for [OJS 3.1.1+](https://pkp.sfu.ca/ojs/)
 
 This theme was developed and is maintained by the [Public Knowledge Project](https://pkp.sfu.ca/).
@@ -17,8 +17,8 @@ This theme can be installed through the **Plugin Gallery** in Open Journal Syste
 
 To contribute changes you will need to install this theme from the `master` branch of this repository.
 
-1. `git clone https://github.com/pkp/immersion.git`.
-2. Move to the theme's root folder: `cd immersion`.
+1. `git clone https://github.com/pkp/highlander.git`.
+2. Move to the theme's root folder: `cd highlander`.
 3. Make sure that [npm](https://www.npmjs.com/get-npm) and [Gulp](https://gulpjs.com/) are installed.
 4. Resolve dependencies: `npm install`. Gulp config file is inside a theme root folder `gulpfile.js`.
 5. To compile external SCSS, concatenate styles and minify: `gulp sass`. The result CSS path is `resources/dist/app.min.css`. The theme's own styles are compiled automatically by OJS's theme API.
@@ -30,7 +30,7 @@ To contribute changes you will need to install this theme from the `master` bran
 Note that the master branch may contain code that will not be shipped to the stable release.
 
 ## Contributors
-Immersion theme was designed and developed by Sophy Ouch ([@sssoz](https://github.com/sssoz)), Vitaliy Bezsheiko ([@Vitaliy-1](https://github.com/Vitaliy-1)), John Willinsky, and Kevin Stranack.
+Highlander theme was designed and developed by Sophy Ouch ([@sssoz](https://github.com/sssoz)), Vitaliy Bezsheiko ([@Vitaliy-1](https://github.com/Vitaliy-1)), John Willinsky, and Kevin Stranack.
 
 ## Troubleshooting
 For technical question regarding the theme (bugs, enhancements, etc.), please open an issue on the plugin's GitHub page. For non-technical questions or if you are uncertain about the question's category please visit the [PKP Forum](https://forum.pkp.sfu.ca/). Before opening and issue or posting a question on forum please make sure that it wasn't solved before.
@@ -38,11 +38,11 @@ For technical question regarding the theme (bugs, enhancements, etc.), please op
 ## Settings
 **Homepage Image |** This theme allows the personalisation of the header background image. By default no image is present but we strongly recommend to use one for the best visual experience. It can be downloaded through `Settings -> Website -> Homepage Image`.
 
-**Sections' Background Color |** Immersion theme adds an option for changing background color of issue sections. It is available under issue menu (for each issue). Picked colors will be displayed prominently on the journal landing page and issue page. The default background color for all sections is white and can be set differently for each section.
+**Sections' Background Color |** Highlander theme adds an option for changing background color of issue sections. It is available under issue menu (for each issue). Picked colors will be displayed prominently on the journal landing page and issue page. The default background color for all sections is white and can be set differently for each section.
 
 **Section description |** If Browse By Section plugin is activated and configured, the theme allows to display a description for each section on the index journal and issue page which is added through the section form.
 
-**Announcement Section Background Color |** Announcements can be displayed prominently on journal's home page. It can be set in `Settings -> Website -> Announcements`. Immersion theme adds an option to change the background color for announcements section enabled through this menu.
+**Announcement Section Background Color |** Announcements can be displayed prominently on journal's home page. It can be set in `Settings -> Website -> Announcements`. Highlander theme adds an option to change the background color for announcements section enabled through this menu.
 
 **Galleys |** If there isn’t any CSS file attached to the HTML galley, the default theme’s style will be used.
 

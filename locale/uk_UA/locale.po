@@ -11,92 +11,92 @@ msgstr ""
 "PO-Revision-Date: 2020-04-23T11:00:04+00:00\n"
 "Language: \n"
 
-msgid "plugins.themes.immersion.name"
+msgid "plugins.themes.highlander.name"
 msgstr "Імерційна тема"
 
-msgid "plugins.themes.immersion.description"
+msgid "plugins.themes.highlander.description"
 msgstr "Тема для OJS 3.1.1+, яка надає можливість повного занурення користувача у читання та пропонує додаткові опції, наприклад, зміну кольорів для секцій журналу на його головній сторінці."
 
-msgid "plugins.themes.immersion.colorPick"
+msgid "plugins.themes.highlander.colorPick"
 msgstr "Обрати колір"
 
-msgid "plugins.themes.immersion.colorPickInstructions"
+msgid "plugins.themes.highlander.colorPickInstructions"
 msgstr "Оберіть колір для секції (рубрики), який буде відображатися на сайті журналу. Має бути валідним HTML кодом (наприклад, #ffff00 для жовтого)."
 
-msgid "plugins.themes.immersion.section.coverPage"
+msgid "plugins.themes.highlander.section.coverPage"
 msgstr "Малюнок для секції журналу"
 
-msgid "plugins.themes.immersion.announcements.colorPick"
+msgid "plugins.themes.highlander.announcements.colorPick"
 msgstr "Колір секції оголошеня на головній сторінці журналу"
 
 msgid "editor.issues.sectionArea"
 msgstr "Опції для секцій випуску"
 
-msgid "plugins.themes.immersion.issue.published"
+msgid "plugins.themes.highlander.issue.published"
 msgstr "Опубліковано"
 
-msgid "plugins.themes.immersion.issue.description"
+msgid "plugins.themes.highlander.issue.description"
 msgstr "Опис випуску"
 
-msgid "plugins.themes.immersion.registration.consent"
+msgid "plugins.themes.highlander.registration.consent"
 msgstr "Згода"
 
-msgid "plugins.themes.immersion.mainMenu"
+msgid "plugins.themes.highlander.mainMenu"
 msgstr "Головне меню"
 
-msgid "plugins.themes.immersion.language.toggle"
+msgid "plugins.themes.highlander.language.toggle"
 msgstr "Змінити мову. Зараз встановлена мова:"
 
-msgid "plugins.themes.immersion.adminMenu"
+msgid "plugins.themes.highlander.adminMenu"
 msgstr "Адмін меню"
 
-msgid "plugins.themes.immersion.about.journal"
+msgid "plugins.themes.highlander.about.journal"
 msgstr "Про журнал"
 
-msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgid "plugins.themes.highlander.issue.fullIssueLink"
 msgstr "Переглянути повний випуск"
 
-msgid "plugins.themes.immersion.search.parameters"
+msgid "plugins.themes.highlander.search.parameters"
 msgstr "Параметри"
 
-msgid "plugins.themes.immersion.article.biography"
+msgid "plugins.themes.highlander.article.biography"
 msgstr "Біографія"
 
-msgid "plugins.themes.immersion.article.figure"
+msgid "plugins.themes.highlander.article.figure"
 msgstr "Обкладинка статті"
 
-msgid "plugins.themes.immersion.authors.browse"
+msgid "plugins.themes.highlander.authors.browse"
 msgstr "Знайти за автором"
 
-msgid "plugins.themes.immersion.author.details"
+msgid "plugins.themes.highlander.author.details"
 msgstr "Детальніше про автора"
 
-msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgid "plugins.themes.highlander.options.sectionDescription.label"
 msgstr "Показувати опис рубрик журналу"
 
-msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgid "plugins.themes.highlander.options.sectionDescription.description"
 msgstr "Після активації на головній сторінці журналу та на сторінці випуску буде показаний опис рубрик (секцій) журналу"
 
-msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgid "plugins.themes.highlander.options.sectionDescription.disable"
 msgstr "Вимкнути"
 
-msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgid "plugins.themes.highlander.options.sectionDescription.enable"
 msgstr "Увімкнути; потребує активації та налаштування модуля Browse By Section"
 
-msgid "plugins.themes.immersion.options.journalDescription.label"
+msgid "plugins.themes.highlander.options.journalDescription.label"
 msgstr "Показати опис журналу"
 
-msgid "plugins.themes.immersion.options.journalDescription.description"
+msgid "plugins.themes.highlander.options.journalDescription.description"
 msgstr "Якщо увімкнено, опис журналу буде представленим на головній сторінці журналу"
 
-msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgid "plugins.themes.highlander.options.journalDescription.disable"
 msgstr "Вимкнути (за замовчуванням)"
 
-msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgid "plugins.themes.highlander.options.journalDescription.enable"
 msgstr "Увімкнути"
 
-msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgid "plugins.themes.highlander.options.journalDescriptionColour.label"
 msgstr "Фон для опису журналу"
 
-msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgid "plugins.themes.highlander.options.journalDescriptionColour.description"
 msgstr "Фоновий колір для секції опису журналу на головній сторінці журналу"

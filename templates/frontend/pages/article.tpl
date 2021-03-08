@@ -19,7 +19,7 @@
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
 
-<main class="container" id="immersion_content_main">
+<main class="container" id="highlander_content_main">
 	<div class="row">
 
 		{* Show article overview *}

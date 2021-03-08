@@ -105,16 +105,16 @@
 
 	{if !empty($sections)}
 		{fbvFormArea id="sectionArea" title="editor.issues.sectionArea"}
-			{fbvFormSection title="plugins.themes.immersion.colorPick" inline=false size=$fbvStyles.size.MEDIUM}
+			{fbvFormSection title="plugins.themes.highlander.colorPick" inline=false size=$fbvStyles.size.MEDIUM}
 				{foreach from=$sections item=section}
 					{assign var=sectionId value=$section->getId()}
 					{* Color picker for issue's sections*}
-					<label for="immersionSectionColor-{$sectionId}">{$section->getLocalizedTitle()|escape}</label>
+					<label for="highlanderSectionColor-{$sectionId}">{$section->getLocalizedTitle()|escape}</label>
 					<input
-						id="immersionSectionColor-{$sectionId}"
+						id="highlanderSectionColor-{$sectionId}"
 						type="color"
-						name="immersionSectionColor[{$sectionId}]"
-						value="{$immersionSectionColor[$sectionId]}"
+						name="highlanderSectionColor[{$sectionId}]"
+						value="{$highlanderSectionColor[$sectionId]}"
 					/>
 				{/foreach}
 			{/fbvFormSection}

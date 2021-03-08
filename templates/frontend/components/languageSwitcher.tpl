@@ -15,7 +15,7 @@
 <ul id="{$id|escape}" class="language-toggle nav">
 	<li class="nav-item dropdown">
 		<a class="main-header__lang-link dropdown-toggle" id="languageToggleMenu{$id|escape}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			<span class="sr-only">{translate key="plugins.themes.immersion.language.toggle"}</span>
+			<span class="sr-only">{translate key="plugins.themes.highlander.language.toggle"}</span>
 			{$languageToggleLocales[$currentLocale]|escape}
 		</a>
 

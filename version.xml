@@ -2,7 +2,7 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * plugins/themes/immersion/version.xml
+  * plugins/themes/highlander/version.xml
   *
   * Copyright (c) 2014-2020 Simon Fraser University
   * Copyright (c) 2003-2020 John Willinsky
@@ -13,7 +13,7 @@
 
 <version>
 	<!-- The application should match the theme folder to ensure it is unique -->
-	<application>immersion</application>
+	<application>highlander</application>
 
 	<!-- The type should always be `plugins.themes` -->
 	<type>plugins.themes</type>
@@ -32,5 +32,5 @@
 	<lazy-load>1</lazy-load>
 
 	<!-- The class name of the plugin. See index.php -->
-	<class>ImmersionThemePlugin</class>
+	<class>HighlanderThemePlugin</class>
 </version>

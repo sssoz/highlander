@@ -11,7 +11,7 @@
  *}
 {include file="frontend/components/header.tpl" pageTitle="user.register"}
 
-<main class="container main__content" id="immersion_content_main">
+<main class="container main__content" id="highlander_content_main">
 	<div class="row">
 		<div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
 			<header class="main__header">
@@ -34,7 +34,7 @@
 				{* When a user is registering with a specific journal *}
 				{if $currentContext}
 					<fieldset class="consent">
-						<legend>{translate key="plugins.themes.immersion.registration.consent"}</legend>
+						<legend>{translate key="plugins.themes.highlander.registration.consent"}</legend>
 						{if $currentContext->getData('privacyStatement')}
 							{* Require the user to agree to the terms of the privacy policy *}
 							<div class="custom-control custom-checkbox optin optin-privacy">

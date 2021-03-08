@@ -11,104 +11,104 @@ msgstr ""
 "PO-Revision-Date: 2020-04-23T11:01:12+00:00\n"
 "Language: \n"
 
-msgid "plugins.themes.immersion.name"
-msgstr "Tema Immersion"
+msgid "plugins.themes.highlander.name"
+msgstr "Tema Highlander"
 
-msgid "plugins.themes.immersion.description"
+msgid "plugins.themes.highlander.description"
 msgstr ""
 "Este es un tema de OJS con imágenes a página completa, tipografías grandes y "
 "bloques en negrita que se adapta a revistas que dan mucha importancia al "
 "factor visual."
 
-msgid "plugins.themes.immersion.colorPick"
+msgid "plugins.themes.highlander.colorPick"
 msgstr "Selector de color"
 
-msgid "plugins.themes.immersion.colorPickInstructions"
+msgid "plugins.themes.highlander.colorPickInstructions"
 msgstr "Elija un color para la sección a mostrar en la parte frontal de la revista. Debe ser un código hexadecimal HTML válido (ej.:, #ffff00 para amarillo)."
 
-msgid "plugins.themes.immersion.section.coverPage"
+msgid "plugins.themes.highlander.section.coverPage"
 msgstr "Imagen de portada de la sección"
 
-msgid "plugins.themes.immersion.annoucements.colorPick"
+msgid "plugins.themes.highlander.annoucements.colorPick"
 msgstr "Color de la sección de anuncios en la página principal de la revista."
 
 msgid "editor.issues.sectionArea"
 msgstr "Opciones para las secciones de las publicaciones"
 
-msgid "plugins.themes.immersion.issue.published"
+msgid "plugins.themes.highlander.issue.published"
 msgstr "Publicado"
 
-msgid "plugins.themes.immersion.issue.description"
+msgid "plugins.themes.highlander.issue.description"
 msgstr "Descripción de la publicación"
 
-msgid "plugins.themes.immersion.registration.consent"
+msgid "plugins.themes.highlander.registration.consent"
 msgstr "Consentimiento"
 
-msgid "plugins.themes.immersion.mainMenu"
+msgid "plugins.themes.highlander.mainMenu"
 msgstr "Menú principal"
 
-msgid "plugins.themes.immersion.language.toggle"
+msgid "plugins.themes.highlander.language.toggle"
 msgstr "Cambiar el idioma. El actual es:"
 
-msgid "plugins.themes.immersion.adminMenu"
+msgid "plugins.themes.highlander.adminMenu"
 msgstr "Menú de administración"
 
-msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgid "plugins.themes.highlander.issue.fullIssueLink"
 msgstr "Ver el número completo"
 
-msgid "plugins.themes.immersion.search.parameters"
+msgid "plugins.themes.highlander.search.parameters"
 msgstr "Parámetros"
 
-msgid "plugins.themes.immersion.article.biography"
+msgid "plugins.themes.highlander.article.biography"
 msgstr "Biografía"
 
-msgid "plugins.themes.immersion.article.figure"
+msgid "plugins.themes.highlander.article.figure"
 msgstr "Imagen de portada"
 
-msgid "plugins.themes.immersion.authors.browse"
+msgid "plugins.themes.highlander.authors.browse"
 msgstr "Navegar por autor/a"
 
-msgid "plugins.themes.immersion.author.details"
+msgid "plugins.themes.highlander.author.details"
 msgstr "Información del autor"
 
-msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgid "plugins.themes.highlander.options.journalDescriptionColour.label"
 msgstr "Fondo de la descripción de la revista"
 
-msgid "plugins.themes.immersion.options.journalDescription.description"
+msgid "plugins.themes.highlander.options.journalDescription.description"
 msgstr ""
 "Si está habilitado, la descripción de la revista se mostrará en la página de "
 "destino de la revista"
 
-msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgid "plugins.themes.highlander.options.sectionDescription.description"
 msgstr ""
 "Si está activado, la descripción de la sección se mostrará en la sección "
 "correspondiente en la página de inicio de la revista"
 
-msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgid "plugins.themes.highlander.options.journalDescriptionColour.description"
 msgstr ""
 "Color de fondo para la sección de descripción de la revista en la página de "
 "inicio de la revista"
 
-msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgid "plugins.themes.highlander.options.journalDescription.enable"
 msgstr "Habilitar"
 
-msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgid "plugins.themes.highlander.options.journalDescription.disable"
 msgstr "Deshabilitar (predeterminado)"
 
-msgid "plugins.themes.immersion.options.journalDescription.label"
+msgid "plugins.themes.highlander.options.journalDescription.label"
 msgstr "Mostrar descripción de la revista"
 
-msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgid "plugins.themes.highlander.options.sectionDescription.enable"
 msgstr "Activar; requiere que el módulo de navegar por sección esté habilitado"
 
-msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgid "plugins.themes.highlander.options.sectionDescription.disable"
 msgstr "Desactivar"
 
-msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgid "plugins.themes.highlander.options.sectionDescription.label"
 msgstr "Mostrar descripción de la sección"
 
-msgid "plugins.themes.immersion.about.journal"
+msgid "plugins.themes.highlander.about.journal"
 msgstr "Acerca de la revista"
 
-msgid "plugins.themes.immersion.announcements.colorPick"
+msgid "plugins.themes.highlander.announcements.colorPick"
 msgstr "Color de la sección de anuncios en la página de inicio de la revista"

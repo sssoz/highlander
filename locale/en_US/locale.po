@@ -11,92 +11,92 @@ msgstr ""
 "PO-Revision-Date: 2020-04-23T10:58:55+00:00\n"
 "Language: \n"
 
-msgid "plugins.themes.immersion.name"
-msgstr "Immersion Theme"
+msgid "plugins.themes.highlander.name"
+msgstr "Highlander Theme"
 
-msgid "plugins.themes.immersion.description"
+msgid "plugins.themes.highlander.description"
 msgstr "An OJS theme with full-page images, large typefaces, and bold colour blocks tailored for journals with a focus on visuals."
 
-msgid "plugins.themes.immersion.colorPick"
+msgid "plugins.themes.highlander.colorPick"
 msgstr "Color Picker"
 
-msgid "plugins.themes.immersion.colorPickInstructions"
+msgid "plugins.themes.highlander.colorPickInstructions"
 msgstr "Pick a color for a section to display on the journal's front-end. Must be valid HTML hex code (e.g., #ffff00 for yellow)."
 
-msgid "plugins.themes.immersion.section.coverPage"
+msgid "plugins.themes.highlander.section.coverPage"
 msgstr "Section Cover Image"
 
-msgid "plugins.themes.immersion.announcements.colorPick"
+msgid "plugins.themes.highlander.announcements.colorPick"
 msgstr "Announcements section colour on the journal's home page"
 
 msgid "editor.issues.sectionArea"
 msgstr "Options for issue's sections"
 
-msgid "plugins.themes.immersion.issue.published"
+msgid "plugins.themes.highlander.issue.published"
 msgstr "Published"
 
-msgid "plugins.themes.immersion.issue.description"
+msgid "plugins.themes.highlander.issue.description"
 msgstr "Issue description"
 
-msgid "plugins.themes.immersion.registration.consent"
+msgid "plugins.themes.highlander.registration.consent"
 msgstr "Consent"
 
-msgid "plugins.themes.immersion.mainMenu"
+msgid "plugins.themes.highlander.mainMenu"
 msgstr "Main menu"
 
-msgid "plugins.themes.immersion.language.toggle"
+msgid "plugins.themes.highlander.language.toggle"
 msgstr "Change the language. The current language is:"
 
-msgid "plugins.themes.immersion.adminMenu"
+msgid "plugins.themes.highlander.adminMenu"
 msgstr "Admin menu"
 
-msgid "plugins.themes.immersion.about.journal"
+msgid "plugins.themes.highlander.about.journal"
 msgstr "About the journal"
 
-msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgid "plugins.themes.highlander.issue.fullIssueLink"
 msgstr "See the full issue"
 
-msgid "plugins.themes.immersion.search.parameters"
+msgid "plugins.themes.highlander.search.parameters"
 msgstr "Parameters"
 
-msgid "plugins.themes.immersion.article.biography"
+msgid "plugins.themes.highlander.article.biography"
 msgstr "Bio"
 
-msgid "plugins.themes.immersion.article.figure"
+msgid "plugins.themes.highlander.article.figure"
 msgstr "Cover image"
 
-msgid "plugins.themes.immersion.authors.browse"
+msgid "plugins.themes.highlander.authors.browse"
 msgstr "Browse by Author"
 
-msgid "plugins.themes.immersion.author.details"
+msgid "plugins.themes.highlander.author.details"
 msgstr "Author Details"
 
-msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgid "plugins.themes.highlander.options.sectionDescription.label"
 msgstr "Show section description"
 
-msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgid "plugins.themes.highlander.options.sectionDescription.description"
 msgstr "If activated, the section description will be shown under the appropriate section on the journal homepage"
 
-msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgid "plugins.themes.highlander.options.sectionDescription.disable"
 msgstr "Disable"
 
-msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgid "plugins.themes.highlander.options.sectionDescription.enable"
 msgstr "Enable; requires Browse By Section plugin to be activated"
 
-msgid "plugins.themes.immersion.options.journalDescription.label"
+msgid "plugins.themes.highlander.options.journalDescription.label"
 msgstr "Show journal description"
 
-msgid "plugins.themes.immersion.options.journalDescription.description"
+msgid "plugins.themes.highlander.options.journalDescription.description"
 msgstr "If enabled, the journal description will be shown on the journal's landing page"
 
-msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgid "plugins.themes.highlander.options.journalDescription.disable"
 msgstr "Disable (default)"
 
-msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgid "plugins.themes.highlander.options.journalDescription.enable"
 msgstr "Enable"
 
-msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgid "plugins.themes.highlander.options.journalDescriptionColour.label"
 msgstr "Journal description background"
 
-msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgid "plugins.themes.highlander.options.journalDescriptionColour.description"
 msgstr "Background colour for the journal description section on the journal home page"

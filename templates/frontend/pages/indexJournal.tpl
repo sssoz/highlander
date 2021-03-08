@@ -17,12 +17,12 @@
  * @uses $issue Issue Current issue
  * @uses $issueIdentificationString string issue identification that relies on user's settings
  * @uses $lastSectionColor string background color of the last section presented on the index page
- * @uses $immersionAnnouncementsColor string background color of the announcements section
+ * @uses $highlanderAnnouncementsColor string background color of the announcements section
  *}
 
 {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
-<main id="immersion_content_main">
+<main id="highlander_content_main">
 
 	{call_hook name="Templates::Index::journal"}
 
@@ -49,7 +49,7 @@
 
 	{* Announcements *}
 	{if $numAnnouncementsHomepage && $announcements|@count}
-		<section class="announcements{if $isAnnouncementDark} section_dark{/if}"{if $immersionAnnouncementsColor} style="background-color: {$immersionAnnouncementsColor|escape};"{/if}>
+		<section class="announcements{if $isAnnouncementDark} section_dark{/if}"{if $highlanderAnnouncementsColor} style="background-color: {$highlanderAnnouncementsColor|escape};"{/if}>
 			<div class="container">
 				<header class="row">
 					<h3 class="col-md-6">

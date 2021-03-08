@@ -16,7 +16,7 @@
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$issueIdentification|escape}
 
-<main id="immersion_content_main">
+<main id="highlander_content_main">
 	<section class="issue{if !$issue} issue__empty{/if}">
 
 	{* Display a message if no current issue exists *}

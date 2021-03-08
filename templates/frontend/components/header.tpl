@@ -6,7 +6,7 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Site-wide header; includes journal logo, user menu, and primary menu
- * @uses $languageToggleLocales array All supported locales (from the Immersion theme)
+ * @uses $languageToggleLocales array All supported locales (from the Highlander theme)
  *}
 
 {strip}
@@ -26,17 +26,17 @@
 <html lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
 {if !$pageTitleTranslated}{capture assign="pageTitleTranslated"}{translate key=$pageTitle}{/capture}{/if}
 {include file="frontend/components/headerHead.tpl"}
-<body class="page_{$requestedPage|escape|default:"index"} op_{$requestedOp|escape|default:"index"}{if $showingLogo} has_site_logo{/if}{if $immersionIndexType} {$immersionIndexType|escape}{/if}"
+<body class="page_{$requestedPage|escape|default:"index"} op_{$requestedOp|escape|default:"index"}{if $showingLogo} has_site_logo{/if}{if $highlanderIndexType} {$highlanderIndexType|escape}{/if}"
       dir="{$currentLocaleLangDir|escape|default:"ltr"}">
 
 <div class="cmp_skip_to_content">
-	<a class="sr-only" href="#immersion_content_header">{translate key="navigation.skip.nav"}</a>
-	<a class="sr-only" href="#immersion_content_main">{translate key="navigation.skip.main"}</a>
-	<a class="sr-only" href="#immersion_content_footer">{translate key="navigation.skip.footer"}</a>
+	<a class="sr-only" href="#highlander_content_header">{translate key="navigation.skip.nav"}</a>
+	<a class="sr-only" href="#highlander_content_main">{translate key="navigation.skip.main"}</a>
+	<a class="sr-only" href="#highlander_content_footer">{translate key="navigation.skip.footer"}</a>
 </div>
 
 <header class="main-header"
-        id="immersion_content_header"{if $immersionHomepageImage} style="background-image: url('{$publicFilesDir}/{$immersionHomepageImage.uploadName|escape:"url"}')"{/if}>
+        id="highlander_content_header"{if $highlanderHomepageImage} style="background-image: url('{$publicFilesDir}/{$highlanderHomepageImage.uploadName|escape:"url"}')"{/if}>
 	<div class="container-fluid">
 		<nav class="main-header__admin{if $localeShow} locale-enabled{else} locale-disabled{/if}">
 
@@ -51,7 +51,7 @@
 			{/if}
 
 			{if !empty(trim($userMenu))}
-				<h2 class="sr-only">{translate key="plugins.themes.immersion.adminMenu"}</h2>
+				<h2 class="sr-only">{translate key="plugins.themes.highlander.adminMenu"}</h2>
 				{$userMenu}
 			{/if}
 
@@ -101,7 +101,7 @@
 		                <span class="hamburger__icon"></span>
 		            </span>
 				</button>
-				<h2 class="sr-only">{translate key="plugins.themes.immersion.mainMenu"}</h2>
+				<h2 class="sr-only">{translate key="plugins.themes.highlander.mainMenu"}</h2>
 				<div class="collapse navbar-collapse" id="main-menu">
 					{$primaryMenu}
 				</div>

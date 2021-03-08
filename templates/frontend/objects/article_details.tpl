@@ -157,7 +157,7 @@
 								<br/>
 								<a class="modal-trigger" href="#modalAuthorBio-{$authorKey+1}" data-toggle="modal"
 								   data-target="#modalAuthorBio-{$authorKey+1}">
-									{translate key="plugins.themes.immersion.article.biography"}
+									{translate key="plugins.themes.highlander.article.biography"}
 								</a>
 								{* author's biography *}
 								<div class="modal fade bio-modal" id="modalAuthorBio-{$authorKey+1}" tabindex="-1"
@@ -311,7 +311,7 @@
 
 	{* Article/Issue cover image *}
 	{if $publication->getLocalizedData('coverImage') || ($issue && $issue->getLocalizedCoverImage())}
-		<h2 class="sr-only">{translate key="plugins.themes.immersion.article.figure"}</h2>
+		<h2 class="sr-only">{translate key="plugins.themes.highlander.article.figure"}</h2>
 		<figure>
 			{if $publication->getLocalizedData('coverImage')}
 				<img

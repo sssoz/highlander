@@ -1,5 +1,5 @@
 /**
- * @file cypress/tests/functional/Immersion.spec.js
+ * @file cypress/tests/functional/Highlander.spec.js
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2000-2020 John Willinsky
@@ -41,13 +41,13 @@ describe('Theme plugin tests', function() {
 		cy.get('button[id="plugins-button"]').click();
 
 		// Find and enable the plugin
-		cy.get('input[id^="select-cell-immersionthemeplugin-enabled"]').click();
-		cy.get('div:contains(\'The plugin "Immersion Theme" has been enabled.\')');
+		cy.get('input[id^="select-cell-highlanderthemeplugin-enabled"]').click();
+		cy.get('div:contains(\'The plugin "Highlander Theme" has been enabled.\')');
 		cy.reload();
 
 		// Select the Classic theme
 		cy.get('button[id="appearance-button"]').click();
-		cy.get('select[id="theme-themePluginPath-control"]').select('immersion');
+		cy.get('select[id="theme-themePluginPath-control"]').select('highlander');
 		cy.get('#theme button').contains('Save').click();
 		cy.get('#theme [role="status"]').contains('Saved');
 	});

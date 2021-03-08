@@ -49,7 +49,7 @@
 		{/if}
 
 		{if $issue->getDatePublished()}
-			<p class="issue__meta">{translate key="plugins.themes.immersion.issue.published"} {$issue->getDatePublished()|date_format:$dateFormatLong}</p>
+			<p class="issue__meta">{translate key="plugins.themes.highlander.issue.published"} {$issue->getDatePublished()|date_format:$dateFormatLong}</p>
 		{/if}
 		{/strip}
 	</header>
@@ -64,7 +64,7 @@
 			{/if}
 			{if $issue->getLocalizedDescription()}
 				<div class="col-md-6">
-					<h3 class="issue-desc__title">{translate key="plugins.themes.immersion.issue.description"}</h3>
+					<h3 class="issue-desc__title">{translate key="plugins.themes.highlander.issue.description"}</h3>
 					<div class="issue-desc__content">
 						{assign var=stringLenght value=280}
 						{assign var=issueDescription value=$issue->getLocalizedDescription()|strip_unsafe_html}
@@ -74,7 +74,7 @@
 							{$issueDescription|substr:0:$stringLenght|mb_convert_encoding:'UTF-8'|replace:'?':''|trim}
 							<span class="ellipsis">...</span>
 							<a class="full-issue__link"
-							   href="{url op="view" page="issue" path=$issue->getBestIssueId()}">{translate key="plugins.themes.immersion.issue.fullIssueLink"}</a>
+							   href="{url op="view" page="issue" path=$issue->getBestIssueId()}">{translate key="plugins.themes.highlander.issue.fullIssueLink"}</a>
 						{/if}
 					</div>
 				</div>
@@ -102,9 +102,9 @@
 
 {foreach from=$publishedSubmissions item=section}
 	{if $section.articles}
-		{assign var='immersionColorPick' value=$section.sectionColor|escape}
+		{assign var='highlanderColorPick' value=$section.sectionColor|escape}
 		{assign var='isSectionDark' value=$section.isSectionDark}
-		<section class="issue-section{if $isSectionDark} section_dark{/if}"{if $immersionColorPick} style="background-color: {$immersionColorPick};"{/if}>
+		<section class="issue-section{if $isSectionDark} section_dark{/if}"{if $highlanderColorPick} style="background-color: {$highlanderColorPick};"{/if}>
 			<div class="container">
 				{if $section.title || $section.sectionDescription}
 					<header class="row issue-section__header">

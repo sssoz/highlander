@@ -1,20 +1,20 @@
 <?php
 
 /**
- * @file plugins/themes/immersion/ImmersionThemePlugin.inc.php
+ * @file plugins/themes/highlander/HighlanderThemePlugin.inc.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class ImmersionThemePlugin
- * @ingroup plugins_themes_immersion
+ * @class HighlanderThemePlugin
+ * @ingroup plugins_themes_highlander
  *
- * @brief Immersion theme
+ * @brief Highlander theme
  */
 
 import('lib.pkp.classes.plugins.ThemePlugin');
-class ImmersionThemePlugin extends ThemePlugin {
+class HighlanderThemePlugin extends ThemePlugin {
 
 	public function init() {
 
@@ -33,45 +33,45 @@ class ImmersionThemePlugin extends ThemePlugin {
 
 		// Option to show section description on the journal's homepage; turned off by default
 		$this->addOption('sectionDescriptionSetting', 'FieldOptions', array(
-			'label' => __('plugins.themes.immersion.options.sectionDescription.label'),
-			'description' => __('plugins.themes.immersion.options.sectionDescription.description'),
+			'label' => __('plugins.themes.highlander.options.sectionDescription.label'),
+			'description' => __('plugins.themes.highlander.options.sectionDescription.description'),
 			'type' => 'radio',
 			'options' => array(
 				[
 					'value' => 'disable',
-					'label'  => __('plugins.themes.immersion.options.sectionDescription.disable'),
+					'label'  => __('plugins.themes.highlander.options.sectionDescription.disable'),
 				],
 				[
 					'value' => 'enable',
-					'label'  => __('plugins.themes.immersion.options.sectionDescription.enable'),
+					'label'  => __('plugins.themes.highlander.options.sectionDescription.enable'),
 				],
 			)
 		));
 
 		$this->addOption('journalDescription', 'FieldOptions', array(
-			'label' => __('plugins.themes.immersion.options.journalDescription.label'),
-			'description' => __('plugins.themes.immersion.options.journalDescription.description'),
+			'label' => __('plugins.themes.highlander.options.journalDescription.label'),
+			'description' => __('plugins.themes.highlander.options.journalDescription.description'),
 			'type' => 'radio',
 			'options' => array(
 				[
 					'value' => 0,
-					'label' => __('plugins.themes.immersion.options.journalDescription.disable'),
+					'label' => __('plugins.themes.highlander.options.journalDescription.disable'),
 				],
 				[
 					'value' => 1,
-					'label' => __('plugins.themes.immersion.options.journalDescription.enable'),
+					'label' => __('plugins.themes.highlander.options.journalDescription.enable'),
 				],
 			)
 		));
 
 		$this->addOption('journalDescriptionColour', 'FieldColor', array(
-			'label' => __('plugins.themes.immersion.options.journalDescriptionColour.label'),
-			'description' => __('plugins.themes.immersion.options.journalDescriptionColour.description'),
+			'label' => __('plugins.themes.highlander.options.journalDescriptionColour.label'),
+			'description' => __('plugins.themes.highlander.options.journalDescriptionColour.description'),
 			'default' => '#000',
 		));
 
-		$this->addOption('immersionAnnouncementsColor', 'FieldColor', array(
-			'label' => __('plugins.themes.immersion.announcements.colorPick'),
+		$this->addOption('highlanderAnnouncementsColor', 'FieldColor', array(
+			'label' => __('plugins.themes.highlander.announcements.colorPick'),
 			'default' => '#000',
 		));
 
@@ -106,7 +106,7 @@ class ImmersionThemePlugin extends ThemePlugin {
 	 * @return string
 	 */
 	public function getDisplayName() {
-		return __('plugins.themes.immersion.name');
+		return __('plugins.themes.highlander.name');
 	}
 
 	/**
@@ -114,7 +114,7 @@ class ImmersionThemePlugin extends ThemePlugin {
 	 * @return string
 	 */
 	public function getDescription() {
-		return __('plugins.themes.immersion.description');
+		return __('plugins.themes.highlander.description');
 	}
 
 	/**
@@ -160,8 +160,8 @@ class ImmersionThemePlugin extends ThemePlugin {
 		$publishedSubmissionsInSection = $templateMgr->getTemplateVars('publishedSubmissions');
 
 		// Section color
-		$immersionSectionColors = $issue->getData('immersionSectionColor');
-		if (empty($immersionSectionColors)) return false; // Section background colors aren't set
+		$highlanderSectionColors = $issue->getData('highlanderSectionColor');
+		if (empty($highlanderSectionColors)) return false; // Section background colors aren't set
 
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		$sections = $sectionDao->getByIssueId($issue->getId());
@@ -185,11 +185,11 @@ class ImmersionThemePlugin extends ThemePlugin {
 				if ($section->getId() == $sectionId) {
 					// Set section and its background color
 					$publishedSubmissionsInSection[$sectionId]['section'] = $section;
-					$publishedSubmissionsInSection[$sectionId]['sectionColor'] = $immersionSectionColors[$sectionId];
+					$publishedSubmissionsInSection[$sectionId]['sectionColor'] = $highlanderSectionColors[$sectionId];
 
 					// Check if section background color is dark
 					$isSectionDark = false;
-					if ($immersionSectionColors[$sectionId] && $this->isColourDark($immersionSectionColors[$sectionId])) {
+					if ($highlanderSectionColors[$sectionId] && $this->isColourDark($highlanderSectionColors[$sectionId])) {
 						$isSectionDark = true;
 					}
 					$publishedSubmissionsInSection[$sectionId]['isSectionDark'] = $isSectionDark;
@@ -200,8 +200,8 @@ class ImmersionThemePlugin extends ThemePlugin {
 					}
 
 					// Need only the color of the last section that contains articles
-					if ($publishedSubmissionsInSection[$sectionId]['articles'] && $immersionSectionColors[$sectionId]) {
-						$lastSectionColor = $immersionSectionColors[$sectionId];
+					if ($publishedSubmissionsInSection[$sectionId]['articles'] && $highlanderSectionColors[$sectionId]) {
+						$lastSectionColor = $highlanderSectionColors[$sectionId];
 					}
 				}
 			}
@@ -234,17 +234,17 @@ class ImmersionThemePlugin extends ThemePlugin {
 
 		// Announcements on index journal page
 		$announcementsIntro = $journal->getLocalizedData('announcementsIntroduction');
-		$immersionAnnouncementsColor = $this->getOption('immersionAnnouncementsColor');
+		$highlanderAnnouncementsColor = $this->getOption('highlanderAnnouncementsColor');
 
 		$isAnnouncementDark = false;
-		if ($immersionAnnouncementsColor && $this->isColourDark($immersionAnnouncementsColor)) {
+		if ($highlanderAnnouncementsColor && $this->isColourDark($highlanderAnnouncementsColor)) {
 			$isAnnouncementDark = true;
 		}
 
 		$templateMgr->assign(array(
 			'announcementsIntroduction'=> $announcementsIntro,
 			'isAnnouncementDark' => $isAnnouncementDark,
-			'immersionAnnouncementsColor' => $immersionAnnouncementsColor
+			'highlanderAnnouncementsColor' => $highlanderAnnouncementsColor
 		));
 	}
 
@@ -281,7 +281,7 @@ class ImmersionThemePlugin extends ThemePlugin {
 			$orcidImageUrl = $this->getPluginPath() . '/templates/images/orcid.png';
 
 			if ($request->getContext()) {
-				$templateMgr->assign('immersionHomepageImage', $journal->getLocalizedSetting('homepageImage'));
+				$templateMgr->assign('highlanderHomepageImage', $journal->getLocalizedSetting('homepageImage'));
 			}
 
 			$templateMgr->assign(array(
@@ -331,7 +331,7 @@ class ImmersionThemePlugin extends ThemePlugin {
 	 */
 	public function addIssueDAOFieldNames($hookName, $args) {
 		$fields =& $args[1];
-		$fields[] = 'immersionSectionColor';
+		$fields[] = 'highlanderSectionColor';
 	}
 
 
@@ -345,7 +345,7 @@ class ImmersionThemePlugin extends ThemePlugin {
 	 */
 	public function initDataIssueFormFields($hookName, $args) {
 		$issueForm = $args[0];
-		$issueForm->setData('immersionSectionColor', $issueForm->issue->getData('immersionSectionColor'));
+		$issueForm->setData('highlanderSectionColor', $issueForm->issue->getData('highlanderSectionColor'));
 	}
 
 	/**$$
@@ -361,7 +361,7 @@ class ImmersionThemePlugin extends ThemePlugin {
 		$issueForm =& $args[0];
 		$request = $this->getRequest();
 
-		$issueForm->setData('immersionSectionColor', $request->getUserVar('immersionSectionColor'));
+		$issueForm->setData('highlanderSectionColor', $request->getUserVar('highlanderSectionColor'));
 	}
 
 	/**
@@ -385,7 +385,7 @@ class ImmersionThemePlugin extends ThemePlugin {
 			return;
 		}
 
-		$issue->setData('immersionSectionColor', $issueForm->getData('immersionSectionColor'));
+		$issue->setData('highlanderSectionColor', $issueForm->getData('highlanderSectionColor'));
 
 		$issueDao = DAORegistry::getDAO('IssueDAO');
 		$issueDao->updateObject($issue);

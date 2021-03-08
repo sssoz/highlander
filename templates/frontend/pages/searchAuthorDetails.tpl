@@ -13,11 +13,11 @@
 	{include file="frontend/components/header.tpl"}
 {/strip}
 
-<main id="immersion_content_main">
+<main id="highlander_content_main">
 	<section class="author-details__meta">
 		<div class="container">
 			<h1 class="author-details__title">
-				{translate key="plugins.themes.immersion.author.details"}
+				{translate key="plugins.themes.highlander.author.details"}
 			</h1>
 			<h2 class="author-details__name">{$authorName|escape}
 			</h2>
