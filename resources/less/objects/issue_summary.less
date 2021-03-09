@@ -11,27 +11,15 @@
 
 .archived-issue {
 	margin-bottom: 3rem;
-
-	& .series {
-		font-size: 80%;
-		letter-spacing: -0.025em;
-	}
 }
 
 .archived-issue__title {
-	margin-top: 0.75em;
-	font-size: 80%;
-	font-family: @font-family-primary;
-	font-weight: 400;
-	line-height: 1.45;
+  margin-top: 0;
 }
 
-.archived-issue__date {
-	color: darkgrey;
-}
-
-a.issue-summary__link {
-	color: #000;
+.archived-issue__link {
+  display: flex;
+  color: #000;
 	border-bottom: 0;
 	transition: none;
 	-webkit-transition: none;
@@ -39,4 +27,21 @@ a.issue-summary__link {
 	&:after {
 		display: none;
 	}
+}
+
+.archived-issue__img-wrapper {
+  margin: 0;
+  width: 50%;
+  height: 300px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.issue-summary {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, .05);
 }

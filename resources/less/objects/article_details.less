@@ -42,13 +42,10 @@
 }
 
 .article-page .btn {
-	border-color: #fff;
+  margin-top: 1em;
 	margin-right: 1em;
 }
 
-.article-sidebar {
-	padding-top: 5vh;
-}
 
 .article-page__versions {
 	margin: 0;
@@ -56,23 +53,22 @@
 	list-style: none;
 }
 
-// List of authors
+.authors {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
-.authors-string {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: flex-start;
-	list-style-type: none;
-	padding-left: 0;
+  li {
+    margin-bottom: 1em;
+  }
 }
 
-.authors-string__item {
+.authors__item {
+  margin-bottom: 2em;
+}
 
-	&:not(:last-child):after {
-		content: ', ';
-		padding-right: 7px;
-	}
+.authors__name {
+  margin-bottom: 0;
 }
 
 .bio-modal {

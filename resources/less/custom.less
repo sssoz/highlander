@@ -3,42 +3,8 @@
   --body-typeface: 'Roboto', sans-serif;
 }
 
-body {
-  font-family: var(--body-typeface);
-  -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 1.5s; /* Firefox < 16 */
-        -ms-animation: fadein 1.5s; /* Internet Explorer */
-         -o-animation: fadein 1.5s; /* Opera < 12.1 */
-            animation: fadein 1.5s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+html {
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6, legend {
@@ -51,60 +17,10 @@ a:focus {
   color: #333;
 }
 
-.main-header__title > a > img {
-  max-width: 100%;
-  height: auto;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, .15);
-}
-
 a.main-header__admin-link,
 a.main-header__lang-link,
 a.full-issue__link {
   color: #FFF;
-}
-
-@media (min-width: 992px) {
-  #navigationPrimary .dropdown-menu.show {
-    margin-top: -1px;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding: 0;
-    width: 100vw;
-    border: 0;
-    background-color: #000;
-  }
-
-  #navigationPrimary .dropdown-item a {
-    padding: 1.5em;
-    border: 0;
-    background: none;
-    color: #FFF;
-  }
-
-  #navigationPrimary .dropdown-item a:focus,
-  #navigationPrimary .dropdown-item a:hover,
-  #navigationPrimary .dropdown-item a:active {
-    background: var(--main-colour);
-    color: #000;
-    border: 0;
-  }
-
-  .page_index #navigationPrimary .dropdown-menu.show {
-    background-color: var(--main-colour);
-  }
-
-  .page_index #navigationPrimary .dropdown-item a {
-    color: #000;
-  }
-
-  #navigationPrimary .dropdown-item a:focus,
-  #navigationPrimary .dropdown-item a:hover,
-  #navigationPrimary .dropdown-item a:active {
-    background: #FFF;
-    border: 0;
-  }
 }
 
 .dropdown-menu {
@@ -147,16 +63,6 @@ a.full-issue__link {
   background: var(--main-colour);
 }
 
-@media (min-width: 768px) {
-  .main-header__title > a > img {
-    max-width: 50%;
-  }
-}
-
-.article {
-  margin-bottom: 1em;
-}
-
 .article__meta {
   margin-bottom: .5em;
 }
@@ -172,12 +78,6 @@ a.full-issue__link {
 
 .article-page__meta a:after {
   border: 0;
-}
-
-.issue,
-.issue-section {
-  padding-top: 5vh;
-  padding-bottom: 0;
 }
 
 .issue__header {
