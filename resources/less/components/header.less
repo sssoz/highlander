@@ -12,6 +12,9 @@
 // Header and general rules for navigation menus
 
 .main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 	background-color: @primary-color;
 	position: relative;
 	background-position: center;
@@ -19,7 +22,7 @@
 	background-size: cover;
 	font-family: @font-family-primary;
 	font-weight: 300;
-	height: 100%;
+	height: 45vh;
 
 	& ul {
 		list-style: none;
@@ -37,23 +40,26 @@
 	}
 }
 
-.page_index:not(.indexSite) .main-header {
-	padding-top: 2.5vh;
+// Full-height cover for issues only
+.page_issue.op_view .main-header {
+  height: 100vh;
+}
+
+// Larger homepage image
+.page_index .main-header {
+  height: 75vh;
 }
 
 // Header title
 
 .main-header__title {
-	text-align: center;
-	width: 75vw;
+  margin: 0;
 	font-size: 1.5rem;
 	line-height: 1.4;
-	padding: 0.5rem 0;
-	margin: 0.5rem auto;
 
 	img {
-		max-width: 100%;
-		height: auto;
+		width: auto;
+		height: 60px;
 	}
 
 	& span {
@@ -70,10 +76,16 @@
 	}
 }
 
+.main-header__down {
+  padding: 1em;
+  margin-bottom: 5vh;
+  background-color: rgba(255, 255, 255, .5);
+  text-align: center;
+  align-self: center;
+  font-weight: 800;
+}
+
 .page_index:not(.indexSite) .main-header__title {
-	text-align: center;
-	margin: 7.5vh auto 15vh auto;
-	max-width: 75vw;
 }
 
 // Admin Navigation
@@ -86,10 +98,16 @@
 .nav-tabs .nav-link {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
+}
 
+.main-header__container {
+  background-color: rgba(255, 255, 255, .25);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .main-header__admin {
+  padding: .5em;
 	display: flex;
 	font-size: smaller;
 
@@ -98,7 +116,7 @@
 	}
 
 	&.locale-disabled {
-		justify-content: flex-end;
+		justify-content: space-between;
 	}
 }
 
@@ -132,8 +150,10 @@
 
 .main-header__nav-link {
 	padding: 0.25em 0.5em;
-	background-color: #fff;
 	margin: 0 2vw;
+	background-color: #000;
+  color: @secondary-color;
+  transition: all .15s ease-in-out;
 
 	&:hover, &:focus, &:active {
 		color: @secondary-color;
@@ -155,50 +175,42 @@
 }
 
 @media (min-width: 992px) {
+  .main-header__admin {
+    align-items: center;
+  }
+
 	// Dropdown menu for Primary Navigation
 	#navigationPrimary {
 		& .dropdown-menu.show {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-around;
-			align-content: center;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			padding: 1rem;
-			background-color: @secondary-color;
-			border-radius: 0;
-			width: 100%;
-			padding-top: 16px;
-			padding-bottom: 14px;
+			width: auto;
+      right: 0;
+  		border-radius: 0;
+      background-color: #000;
 		}
 
 		& .nav-item {
 			position: static;
 		}
 
-		& .nav-link {
-
-			&:focus, &:hover {
-
-			}
-		}
-
 		& .dropdown-item {
-			width: initial;
+      display: block;
 			padding: 0;
 			margin-bottom: 0;
 
-			& a {
-				margin-left: 0;
-				padding: 10px 8px 8px 8px;
-				border: 1px solid @secondary-color;
+      a {
+        padding: 1.5em;
+        border: 0;
+        background: none;
+        color: #FFF;
 
-				&:focus, &:hover {
-					background-color: @secondary-color;
-					border: 1px solid @primary-color;
-				}
-			}
+        &:focus,
+        &:hover,
+        &:active {
+          background: @primary-color;
+          color: #000;
+          border: 0;
+        }
+      }
 		}
 	}
 }

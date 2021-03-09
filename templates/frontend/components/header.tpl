@@ -36,76 +36,90 @@
 </div>
 
 <header class="main-header"
-        id="highlander_content_header"{if $highlanderHomepageImage} style="background-image: url('{$publicFilesDir}/{$highlanderHomepageImage.uploadName|escape:"url"}')"{/if}>
-	<div class="container-fluid">
-		<nav class="main-header__admin{if $localeShow} locale-enabled{else} locale-disabled{/if}">
+        id="highlander_content_header"
+        {if $requestedOp == 'view' && $requestedPage == 'issue' && $issue->getLocalizedCoverImageUrl()}
+        style="background-image: url('{$issue->getLocalizedCoverImageUrl()|escape}');"
+        {elseif $highlanderHomepageImage}
+        style="background-image: url('{$publicFilesDir}/{$highlanderHomepageImage.uploadName|escape:"url"}')"
+        {/if}
+>
 
-			{* User navigation *}
-			{capture assign="userMenu"}
-				{load_menu name="user" id="navigationUser" ulClass="pkp_navigation_user"}
-			{/capture}
+	<nav class="main-header__container">
+    <div class="container-fluid">
+      <div class="main-header__admin{if $localeShow} locale-enabled{else} locale-disabled{/if}">
+        {if $requestedOp == 'index'}
+          <h1 class="main-header__title">
+        {else}
+          <div class="main-header__title">
+        {/if}
 
-			{* language toggle block *}
-			{if $localeShow}
-				{include file="frontend/components/languageSwitcher.tpl" id="languageNav"}
-			{/if}
+        {capture assign="homeUrl"}
+          {url page="index" router=$smarty.const.ROUTE_PAGE}
+        {/capture}
 
-			{if !empty(trim($userMenu))}
-				<h2 class="sr-only">{translate key="plugins.themes.highlander.adminMenu"}</h2>
-				{$userMenu}
-			{/if}
+        {if $displayPageHeaderLogo}
+          <a href="{$homeUrl}" class="is_img">
+            <img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} />
+          </a>
+        {elseif $displayPageHeaderTitle}
+          <a href="{$homeUrl}" class="is_text">
+            <span>{$displayPageHeaderTitle|escape}</span>
+          </a>
+        {else}
+          <a href="{$homeUrl}" class="is_img">
+            <img src="{$baseUrl}/templates/images/structure/logo.png" alt="{$applicationName|escape}" title="{$applicationName|escape}" width="180" height="90" />
+          </a>
+        {/if}
 
-		</nav>
+        {if $requestedOp == 'index'}
+          </h1>
+        {else}
+          </div>
+        {/if}
 
-		{if $requestedOp == 'index'}
-			<h1 class="main-header__title">
-		{else}
-			<div class="main-header__title">
-		{/if}
+        {* Primary navigation *}
+        {capture assign="primaryMenu"}
+          {load_menu name="primary" id="navigationPrimary" ulClass="pkp_navigation_primary"}
+        {/capture}
 
-		{capture assign="homeUrl"}
-			{url page="index" router=$smarty.const.ROUTE_PAGE}
-		{/capture}
+      	{if !empty(trim($primaryMenu)) || $currentContext}
+      	<nav class="navbar navbar-expand-sm main-header__nav">
+      		<button class="navbar-toggler mx-auto hamburger" data-target="#main-menu" data-toggle="collapse"
+      		        type="button"
+      		        aria-label="Menu" aria-controls="navigation">
+      			<span class="hamburger__wrapper">
+                      <span class="hamburger__icon"></span>
+                  </span>
+      		</button>
+      		<h2 class="sr-only">{translate key="plugins.themes.highlander.mainMenu"}</h2>
+      		<div class="collapse navbar-collapse" id="main-menu">
+      			{$primaryMenu}
+      		</div>
+      	</nav>
+      	{/if}
 
-		{if $displayPageHeaderLogo}
-			<a href="{$homeUrl}" class="is_img">
-				<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{else}alt="{translate key="common.pageHeaderLogo.altText"}"{/if} />
-			</a>
-		{elseif $displayPageHeaderTitle}
-			<a href="{$homeUrl}" class="is_text">
-				<span>{$displayPageHeaderTitle|escape}</span>
-			</a>
-		{else}
-			<a href="{$homeUrl}" class="is_img">
-				<img src="{$baseUrl}/templates/images/structure/logo.png" alt="{$applicationName|escape}" title="{$applicationName|escape}" width="180" height="90" />
-			</a>
-		{/if}
+  			{* User navigation *}
+  			{capture assign="userMenu"}
+  				{load_menu name="user" id="navigationUser" ulClass="pkp_navigation_user"}
+  			{/capture}
 
-		{if $requestedOp == 'index'}
-			</h1>
-		{else}
-			</div>
-		{/if}
+  			{* language toggle block *}
+  			{if $localeShow}
+  				{include file="frontend/components/languageSwitcher.tpl" id="languageNav"}
+  			{/if}
 
-			{* Primary navigation *}
-			{capture assign="primaryMenu"}
-				{load_menu name="primary" id="navigationPrimary" ulClass="pkp_navigation_primary"}
-			{/capture}
+  			{if !empty(trim($userMenu))}
+  				<h2 class="sr-only">{translate key="plugins.themes.highlander.adminMenu"}</h2>
+  				{$userMenu}
+  			{/if}
+      </div>
+    </div> {* container closing tag *}
+  </nav>
 
-			{if !empty(trim($primaryMenu)) || $currentContext}
-			<nav class="navbar navbar-expand-sm main-header__nav">
-				<button class="navbar-toggler mx-auto hamburger" data-target="#main-menu" data-toggle="collapse"
-				        type="button"
-				        aria-label="Menu" aria-controls="navigation">
-					<span class="hamburger__wrapper">
-		                <span class="hamburger__icon"></span>
-		            </span>
-				</button>
-				<h2 class="sr-only">{translate key="plugins.themes.highlander.mainMenu"}</h2>
-				<div class="collapse navbar-collapse" id="main-menu">
-					{$primaryMenu}
-				</div>
-			</nav>
-			{/if}
-	</div> {* container closing tag *}
+  {* Only display scroll down link on full-height issue image *}
+  {if $requestedOp == 'view' && $requestedPage == 'issue' && $issue->getLocalizedCoverImageUrl()}
+  <div class="main-header__down">
+    <a href="#highlander_content_main">Scroll to articles</a>
+  </div>
+  {/if}
 </header>

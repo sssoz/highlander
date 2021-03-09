@@ -20,13 +20,10 @@
 {include file="frontend/components/header.tpl" pageTitleTranslated=$article->getLocalizedTitle()|escape}
 
 <main class="container" id="highlander_content_main">
-	<div class="row">
+  {* Show article overview *}
+  {include file="frontend/objects/article_details.tpl"}
 
-		{* Show article overview *}
-		{include file="frontend/objects/article_details.tpl"}
-
-		{call_hook name="Templates::Article::Footer::PageFooter"}
-	</div>
+  {call_hook name="Templates::Article::Footer::PageFooter"}
 </main><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}
