@@ -121,22 +121,6 @@
                      data-target="#modalAuthorBio-{$authorKey+1}">
                     {translate key="plugins.themes.highlander.article.biography"}
                   </a>
-
-                  {* author's biography *}
-                  <div class="modal fade bio-modal" id="modalAuthorBio-{$authorKey+1}" tabindex="-1"
-                       role="dialog">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                        <div class="modal-body">
-                          <h2 class="sr-only">{translate key="submission.authorBiography"}</h2>
-                          {$authorString->getLocalizedBiography()|strip_unsafe_html}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   {/if}
                 </div>
 								{if $authorString->getOrcid()}
@@ -285,6 +269,23 @@
   	{call_hook name="Templates::Article::Main"}
   </div>
 
+  {* Author bio modals *}
+  {foreach from=$publication->getData('authors') item=authorString key=authorStringKey}
+  <div class="modal fade bio-modal" id="modalAuthorBio-{$authorKey+1}" tabindex="-1"
+       role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body">
+          <h2 class="sr-only">{translate key="submission.authorBiography"}</h2>
+          {$authorString->getLocalizedBiography()|strip_unsafe_html}
+        </div>
+      </div>
+    </div>
+  </div>
+  {/foreach}
 </section>
 
 
