@@ -164,12 +164,22 @@
       </div>
     {/if}
 
-    <div class="article-page__meta">
-      <span class="__dimensions_badge_embed__" data-doi="https://doi.org/10.2218/thj.v1.2019.4187" data-style="small_circle"></span>
-    </div>
+
+    {foreach from=$pubIdPlugins item=pubIdPlugin}
+      {if $pubIdPlugin->getPubIdType() != 'doi'}
+        {continue}
+      {/if}
+      {assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
+      {if $pubId}
+        {assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+        <div class="article-page__meta">
+          <span class="__dimensions_badge_embed__" data-doi="{$doiUrl}" data-style="small_circle"></span>
+          <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+        </div>
+      {/if}
+    {/foreach}
 
     <div class="article-page__meta">
-
       <dl>
         {* Pub IDs, including DOI *}
         {foreach from=$pubIdPlugins item=pubIdPlugin}
