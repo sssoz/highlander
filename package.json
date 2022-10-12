@@ -7,7 +7,7 @@
 		"gulp-concat-css": "^3.1.0",
 		"gulp-csso": "^3.0.1",
 		"gulp-minify": "^3.1.0",
-		"gulp-sass": "^4.0.1",
+		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^2.6.4",
 		"jquery": "^3.4.1",
 		"jquery-ui-dist": "^1.12.1",
